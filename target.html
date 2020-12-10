@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <label for="q">Suchbegriff</label>
+        <input id="input" name="input">
+        <button id="finden">finden</button><br><br>
+        <span id="outputName"></span>
+        <script>
+            document.getElementById("finden").onclick = function(){
+                document.write(document.getElementById("input").value);
+            }
+        </script>
+    </body>
+</html>

